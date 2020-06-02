@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <Navigation/>
-    <Header msg="Welcome to Your Vue.js App"/>
+    <HomePage />
   </div>
 </template>
 
 <script>
-import Header from './components/Header/Header.vue'
-import Navigation from './components/Header/Navigation.vue'
+import HomePage from './components/Home/HomePage';
+import Navigation from './components/Header/Navigation.vue';
 
 export default {
   name: 'App',
   components: {
-    Header,
+    HomePage,
     Navigation
   }
 }
