@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <Navigation/>
     <Header msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import Header from './components/Header/Header.vue'
+import Navigation from './components/Header/Navigation.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    Navigation
   }
 }
 </script>
