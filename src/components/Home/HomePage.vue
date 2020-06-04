@@ -2,11 +2,13 @@
   <div class="home-page">
     <Header msg="Welcome to Vue.js Movie App" />
     HomePage
+    <Slider />
   </div>
 </template>
 
 <script>
 import Header from '../Header/Header';
+import Slider from './Slider';
 import tmdb from '../../apis/tmdb';
 
 const apiKey = '3e47509c5e108f3c61f81a43fdd0bb7c';
@@ -19,7 +21,8 @@ export default {
     }
   },
   components: {
-    Header
+    Header,
+    Slider
   },
   methods: {
     getPopularMovies() {
