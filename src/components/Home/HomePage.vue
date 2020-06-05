@@ -26,6 +26,7 @@ export default {
   data(){
     return {
       popularMovies: [],
+      popularPeople: [],
       settings: {
           "centerMode": true,
           "centerPadding": "20px",
@@ -84,7 +85,21 @@ export default {
       .then(response => {
         const result = response.data.results;
         this.popularMovies = result;
-        // console.log(this.popularMovies)
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    },
+    getPopularPeople() {
+      tmdb.get('/person/popular', {
+        params: {
+          api_key: apiKey
+        }
+      })
+      .then(response => {
+        const result = response.data.results;
+        this.popularPeople = result;
+        console.log(this.popularPeople)
       })
       .catch(error => {
         console.log(error);
@@ -93,6 +108,7 @@ export default {
   },
   created() {
     this.getPopularMovies();
+    this.getPopularPeople();
   }
 }
 </script>
