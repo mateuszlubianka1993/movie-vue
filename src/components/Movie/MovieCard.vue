@@ -17,7 +17,7 @@
             <div>
                 <div class="row">
                     <div class="col-8">
-                        <mdb-progress :height="20"  :value="item.vote_average * 10" color="blue" />
+                        <mdb-rating v-model="value" disabled/>
                     </div>
                     <div class="col-4" style="font-size: 0.8rem">
                         {{item.vote_average}}/10
@@ -39,11 +39,16 @@ import {
   mdbCardText,
   mdbView,
   mdbMask,
-  mdbProgress
+  mdbRating
 } from "mdbvue";
 export default {
   name: "MovieCard",
   props: ["item"],
+  data() {
+    return {
+      value: Math.floor(this.item.vote_average/2)
+    }
+  },
   components: {
     mdbCard,
     mdbCardImage,
@@ -52,7 +57,7 @@ export default {
     mdbCardText,
     mdbView,
     mdbMask,
-    mdbProgress
+    mdbRating
   },
 };
 </script>

@@ -132,7 +132,6 @@ export default {
       .then(response => {
         const result = response.data.results;
         this.popularTvShows = result;
-        console.log(this.popularTvShows);
       })
       .catch(error => {
         console.log(error);
