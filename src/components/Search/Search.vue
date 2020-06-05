@@ -14,7 +14,7 @@
                 <strong>Search movies, tv shows and people.</strong>
               </h2>
               <p class="pb-4">Enter title or name to search.</p>
-            <form>
+            <form @submit.prevent="getSearched">
               <mdb-input v-model="inputValue" label="Search..."/>
               <div class="text-xs-left">
                 <mdb-btn color="primary" type="submit">Search</mdb-btn>
@@ -33,9 +33,9 @@
 
 <script>
 // import TvCard from '../TV/TvCard';
-// import tmdb from "../../apis/tmdb";
+import tmdb from "../../apis/tmdb";
 
-// const apiKey = "3e47509c5e108f3c61f81a43fdd0bb7c";
+const apiKey = "3e47509c5e108f3c61f81a43fdd0bb7c";
 
 import {
   mdbEdgeHeader,
@@ -61,15 +61,29 @@ export default {
   data() {
     return {
       inputValue: '',
-      topRated: [],
+      searched: [],
     };
   },
   methods: {
-   
-  },
-  created() {
-    // this.getTopRatedShows();
-  },
+   getSearched() {
+      tmdb
+        .get("/search/multi", {
+          params: {
+            api_key: apiKey,
+            query: this.inputValue
+          },
+        })
+        .then((response) => {
+          const result = response.data.results;
+          this.searched = result;
+          this.inputValue = '';
+          console.log(this.searched);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }
 };
 </script>
 
