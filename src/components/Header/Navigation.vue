@@ -5,17 +5,17 @@
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
       <mdb-navbar-nav right>
-        <mdb-nav-item href="#" active>Home</mdb-nav-item>
-        <mdb-nav-item href="#">Link</mdb-nav-item>
-        <mdb-nav-item class="disabled" href="#">Disabled</mdb-nav-item>
-        <mdb-dropdown tag="li" class="nav-item">
-          <mdb-dropdown-toggle tag="a" navLink color="indigo" slot="toggle" waves-fixed>Dropdown</mdb-dropdown-toggle>
+        <router-link to="/" ><mdb-nav-item active>Home</mdb-nav-item></router-link>
+         <mdb-dropdown tag="li" class="nav-item">
+          <mdb-dropdown-toggle tag="a" navLink color="indigo" slot="toggle" waves-fixed>Rankings</mdb-dropdown-toggle>
           <mdb-dropdown-menu>
-            <mdb-dropdown-item>Action</mdb-dropdown-item>
+            <mdb-dropdown-item><router-link to="/top-movies" >Top Movies</router-link></mdb-dropdown-item>
             <mdb-dropdown-item>Another action</mdb-dropdown-item>
             <mdb-dropdown-item>Something else here</mdb-dropdown-item>
           </mdb-dropdown-menu>
         </mdb-dropdown>
+        <mdb-nav-item href="#">Link</mdb-nav-item>
+        <mdb-nav-item class="disabled" href="#">Disabled</mdb-nav-item>
       </mdb-navbar-nav>
     </mdb-navbar-toggler>
   </mdb-navbar>
