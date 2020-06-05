@@ -14,6 +14,12 @@
                 <strong>Search movies, tv shows and people.</strong>
               </h2>
               <p class="pb-4">Enter title or name to search.</p>
+            <form>
+              <mdb-input label="Search..."/>
+              <div class="text-xs-left">
+                <mdb-btn color="primary" type="submit">Search</mdb-btn>
+              </div>
+            </form>
             </mdb-card-body>
           </mdb-col>
         </mdb-row>
@@ -36,7 +42,9 @@ import {
   mdbContainer,
   mdbRow,
   mdbCol,
-  mdbCardBody
+  mdbCardBody,
+  mdbBtn,
+  mdbInput
 } from "mdbvue";
 export default {
   name: "TopTvShows",
@@ -46,6 +54,8 @@ export default {
     mdbRow,
     mdbCol,
     mdbCardBody,
+    mdbBtn,
+    mdbInput
     // TvCard
   },
   data() {
