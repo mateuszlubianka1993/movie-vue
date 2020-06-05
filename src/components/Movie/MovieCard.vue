@@ -16,7 +16,7 @@
         <mdb-card-text class="card-overview">
             <div>
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-8 rating-col">
                         <mdb-rating v-model="value" disabled/>
                     </div>
                     <div class="col-4" style="font-size: 0.8rem">
@@ -70,6 +70,10 @@ export default {
       .card-title {
             margin-bottom: .1rem;
         }
+      .rating-col {
+        padding-left: 0;
+        padding-right: 0;
+      }
   }
   img {
       width: 100%;
