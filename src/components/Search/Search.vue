@@ -15,7 +15,7 @@
               </h2>
               <p class="pb-4">Enter title or name to search.</p>
             <form>
-              <mdb-input label="Search..."/>
+              <mdb-input v-model="inputValue" label="Search..."/>
               <div class="text-xs-left">
                 <mdb-btn color="primary" type="submit">Search</mdb-btn>
               </div>
@@ -60,11 +60,12 @@ export default {
   },
   data() {
     return {
+      inputValue: '',
       topRated: [],
     };
   },
   methods: {
-    
+   
   },
   created() {
     // this.getTopRatedShows();
