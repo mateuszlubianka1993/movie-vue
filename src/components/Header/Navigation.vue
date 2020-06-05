@@ -11,7 +11,6 @@
           <mdb-dropdown-menu>
             <mdb-dropdown-item><router-link to="/top-movies" >Top Movies</router-link></mdb-dropdown-item>
             <mdb-dropdown-item><router-link to="/top-tvshows" >Top Tv Shows</router-link></mdb-dropdown-item>
-            <mdb-dropdown-item>Something else here</mdb-dropdown-item>
           </mdb-dropdown-menu>
         </mdb-dropdown>
         <mdb-nav-item href="#">Link</mdb-nav-item>
