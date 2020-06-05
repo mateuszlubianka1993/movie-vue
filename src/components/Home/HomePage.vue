@@ -15,6 +15,13 @@
         <PersonCard v-for="(item, index) in popularPeople" :key="index" :item="item" />
       </VueSlickCarousel>
     </section>
+    <section class="popular-tv mt-5">
+      <h3 class="h3-responsive">Popular TV Shows</h3>
+      <hr>
+      <VueSlickCarousel v-bind="settings" v-if="popularTvShows && popularTvShows.length > 1">
+        <TvCard v-for="(item, index) in popularTvShows" :key="index" :item="item" />
+      </VueSlickCarousel>
+    </section>
   </div>
 </template>
 
@@ -22,6 +29,7 @@
 import Header from '../Header/Header';
 import MovieCard from '../Movie/MovieCard';
 import PersonCard from '../Person/PersonCard';
+import TvCard from '../TV/TvCard';
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
@@ -83,7 +91,8 @@ export default {
     Header,
     VueSlickCarousel,
     MovieCard,
-    PersonCard
+    PersonCard,
+    TvCard
   },
   methods: {
     getPopularMovies() {
