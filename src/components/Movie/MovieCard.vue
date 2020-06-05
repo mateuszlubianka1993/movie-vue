@@ -14,14 +14,13 @@
         <mdb-card-title>{{item.title}}</mdb-card-title>
         <p>({{item.release_date}})</p>
         <mdb-card-text class="card-overview">
-          <!-- {{item.overview}} -->
             <div>
                 <div class="row">
                     <div class="col-8">
-                        <mdb-progress :height="20"  :value="75" color="blue" />
+                        <mdb-progress :height="20"  :value="item.vote_average * 10" color="blue" />
                     </div>
                     <div class="col-4" style="font-size: 0.8rem">
-                        7,5/10
+                        {{item.vote_average}}/10
                     </div>
                 </div>
             </div>

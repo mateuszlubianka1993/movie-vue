@@ -8,12 +8,20 @@
         <MovieCard v-for="(item, index) in popularMovies" :key="index" :item="item" />
       </VueSlickCarousel>
     </section>
+    <section class="popular-people mt-5">
+      <h3 class="h3-responsive">Popular People</h3>
+      <hr>
+      <VueSlickCarousel v-bind="settings" v-if="popularPeople && popularPeople.length > 1">
+        <PersonCard v-for="(item, index) in popularPeople" :key="index" :item="item" />
+      </VueSlickCarousel>
+    </section>
   </div>
 </template>
 
 <script>
 import Header from '../Header/Header';
 import MovieCard from '../Movie/MovieCard';
+import PersonCard from '../Person/PersonCard';
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
@@ -73,7 +81,8 @@ export default {
   components: {
     Header,
     VueSlickCarousel,
-    MovieCard
+    MovieCard,
+    PersonCard
   },
   methods: {
     getPopularMovies() {
@@ -99,7 +108,6 @@ export default {
       .then(response => {
         const result = response.data.results;
         this.popularPeople = result;
-        console.log(this.popularPeople)
       })
       .catch(error => {
         console.log(error);
@@ -117,6 +125,7 @@ export default {
 .home-page {
   max-width: 100%;
   overflow: hidden;
+  padding-bottom: 50px;
 }
 
 </style>

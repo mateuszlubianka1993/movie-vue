@@ -14,17 +14,8 @@
         <mdb-card-title>{{item.name}}</mdb-card-title>
         <p></p>
         <mdb-card-text class="card-overview">
-            <div>
-                <div class="row">
-                    <div class="col-8">
-                        <mdb-progress :height="20"  :value="75" color="blue" />
-                    </div>
-                    <div class="col-4" style="font-size: 0.8rem">
-                        7,5/10
-                    </div>
-                </div>
-            </div>
-          </mdb-card-text>
+          Popularity: {{item.popularity}}
+        </mdb-card-text>
       </mdb-card-body>
     </mdb-card>
   </div>
@@ -39,7 +30,6 @@ import {
   mdbCardText,
   mdbView,
   mdbMask,
-  mdbProgress
 } from "mdbvue";
 export default {
   name: "PersonCard",
@@ -52,7 +42,6 @@ export default {
     mdbCardText,
     mdbView,
     mdbMask,
-    mdbProgress
   },
 };
 </script>
