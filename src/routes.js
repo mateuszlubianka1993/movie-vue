@@ -1,6 +1,7 @@
 import HomePage from './components/Home/HomePage.vue';
 import TopMovies from './components/Tops/TopMovies.vue';
 import TopTvShows from './components/Tops/TopTvShows.vue';
+import Search from './components/Search/Search.vue';
 
 export const routes = [
     { path: '', component: HomePage },
@@ -11,5 +12,9 @@ export const routes = [
     {
         path: '/top-tvshows',
         component: TopTvShows
+    },
+    {
+        path: '/search',
+        component: Search
     }
 ];
