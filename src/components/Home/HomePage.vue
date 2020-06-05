@@ -35,6 +35,7 @@ export default {
     return {
       popularMovies: [],
       popularPeople: [],
+      popularTvShows: [],
       settings: {
           "centerMode": true,
           "centerPadding": "20px",
@@ -112,11 +113,27 @@ export default {
       .catch(error => {
         console.log(error);
       })
+    },
+    getPopularTvShows() {
+      tmdb.get('/tv/popular', {
+        params: {
+          api_key: apiKey
+        }
+      })
+      .then(response => {
+        const result = response.data.results;
+        this.popularTvShows = result;
+        console.log(this.popularTvShows);
+      })
+      .catch(error => {
+        console.log(error);
+      })
     }
   },
   created() {
     this.getPopularMovies();
     this.getPopularPeople();
+    this.getPopularTvShows();
   }
 }
 </script>
