@@ -26,13 +26,21 @@
       </mdb-container>
     </section>
     <div class="list-container container-fluid">
-        
+      <div class="row" v-if="searched && searched.length > 1">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col" v-for="(item, index) in searched" :key="index">
+                <TvCard v-if="item.media_type === 'tv'" :item="item" />
+                <MovieCard v-if="item.media_type === 'movie'" :item="item" />
+                <PersonCard v-if="item.media_type === 'person'" :item="item" />
+            </div>
+        </div>    
     </div>
   </div>
 </template>
 
 <script>
-// import TvCard from '../TV/TvCard';
+import TvCard from '../TV/TvCard';
+import MovieCard from '../Movie/MovieCard';
+import PersonCard from '../Person/PersonCard';
 import tmdb from "../../apis/tmdb";
 
 const apiKey = "3e47509c5e108f3c61f81a43fdd0bb7c";
@@ -55,8 +63,10 @@ export default {
     mdbCol,
     mdbCardBody,
     mdbBtn,
-    mdbInput
-    // TvCard
+    mdbInput,
+    TvCard,
+    PersonCard,
+    MovieCard
   },
   data() {
     return {
