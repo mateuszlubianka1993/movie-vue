@@ -13,7 +13,13 @@
             <mdb-dropdown-item><router-link to="/top-tvshows" >Top Tv Shows</router-link></mdb-dropdown-item>
           </mdb-dropdown-menu>
         </mdb-dropdown>
-        <router-link to="/now-playing" ><mdb-nav-item active>Now Playing</mdb-nav-item></router-link>
+        <mdb-dropdown tag="li" class="nav-item">
+          <mdb-dropdown-toggle tag="a" navLink color="indigo" slot="toggle" waves-fixed>Movies</mdb-dropdown-toggle>
+          <mdb-dropdown-menu>
+            <mdb-dropdown-item><router-link to="/now-playing" >Now Playing</router-link></mdb-dropdown-item>
+            <mdb-dropdown-item><router-link to="/upcoming" >Upcoming</router-link></mdb-dropdown-item>
+          </mdb-dropdown-menu>
+        </mdb-dropdown>
         <router-link to="/search" ><mdb-nav-item active>Search</mdb-nav-item></router-link>
       </mdb-navbar-nav>
     </mdb-navbar-toggler>
