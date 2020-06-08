@@ -87,7 +87,6 @@ export default {
           const result = response.data.results;
           this.searched = result;
           this.inputValue = '';
-          console.log(this.searched);
         })
         .catch((error) => {
           console.log(error);
