@@ -20,6 +20,13 @@
             <mdb-dropdown-item><router-link to="/upcoming" >Upcoming</router-link></mdb-dropdown-item>
           </mdb-dropdown-menu>
         </mdb-dropdown>
+        <mdb-dropdown tag="li" class="nav-item">
+          <mdb-dropdown-toggle tag="a" navLink color="indigo" slot="toggle" waves-fixed>Tv Shows</mdb-dropdown-toggle>
+          <mdb-dropdown-menu>
+            <mdb-dropdown-item><router-link to="/on-tv" >On Tv</router-link></mdb-dropdown-item>
+            <mdb-dropdown-item><router-link to="/tv-today" >Airing Today</router-link></mdb-dropdown-item>
+          </mdb-dropdown-menu>
+        </mdb-dropdown>
         <router-link to="/search" ><mdb-nav-item active>Search</mdb-nav-item></router-link>
       </mdb-navbar-nav>
     </mdb-navbar-toggler>

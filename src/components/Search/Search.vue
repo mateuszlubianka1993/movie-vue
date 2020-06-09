@@ -55,7 +55,7 @@ import {
   mdbInput
 } from "mdbvue";
 export default {
-  name: "TopTvShows",
+  name: "Search",
   components: {
     mdbEdgeHeader,
     mdbContainer,

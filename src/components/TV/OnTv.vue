@@ -11,18 +11,18 @@
           >
             <mdb-card-body>
               <h2 class="h2-responsive">
-                <strong>Upcoming</strong>
+                <strong>On Tv</strong>
               </h2>
-              <p class="pb-4">List of upcoming movies in theatres.</p>
+              <p class="pb-4">List of shows that are currently on the air.</p>
             </mdb-card-body>
           </mdb-col>
         </mdb-row>
       </mdb-container>
     </section>
     <div class="list-container container-fluid">
-        <div class="row" v-if="movies && movies.length > 1">
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col" v-for="(item, index) in movies" :key="index">
-                <MovieCard :item="item" />
+        <div class="row" v-if="shows && shows.length > 1">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col" v-for="(item, index) in shows" :key="index">
+                <TvCard :item="item" />
             </div>
         </div>
     </div>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import MovieCard from '../Movie/MovieCard';
+import TvCard from '../TV/TvCard';
 import tmdb from "../../apis/tmdb";
 
 const apiKey = "3e47509c5e108f3c61f81a43fdd0bb7c";
@@ -43,31 +43,31 @@ import {
   mdbCardBody
 } from "mdbvue";
 export default {
-  name: "Upcoming",
+  name: "OnTv",
   components: {
     mdbEdgeHeader,
     mdbContainer,
     mdbRow,
     mdbCol,
     mdbCardBody,
-    MovieCard
+    TvCard
   },
   data() {
     return {
-      movies: [],
+      shows: [],
     };
   },
   methods: {
-    getUpcoming() {
+    getOnAir() {
       tmdb
-        .get("/movie/upcoming", {
+        .get("/tv/on_the_air", {
           params: {
             api_key: apiKey,
           },
         })
         .then((response) => {
           const result = response.data.results;
-          this.movies = result;
+          this.shows = result;
         })
         .catch((error) => {
           console.log(error);
@@ -75,7 +75,7 @@ export default {
     },
   },
   created() {
-    this.getUpcoming();
+    this.getOnAir();
   },
 };
 </script>

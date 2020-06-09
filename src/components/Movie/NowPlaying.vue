@@ -43,7 +43,7 @@ import {
   mdbCardBody
 } from "mdbvue";
 export default {
-  name: "TopMovies",
+  name: "NowPlaying",
   components: {
     mdbEdgeHeader,
     mdbContainer,

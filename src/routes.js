@@ -4,6 +4,7 @@ import TopTvShows from './components/Tops/TopTvShows.vue';
 import Search from './components/Search/Search.vue';
 import NowPlaying from './components/Movie/NowPlaying.vue';
 import Upcoming from './components/Movie/Upcoming.vue';
+import OnTv from './components/TV/OnTv.vue';
 
 export const routes = [
     { path: '', component: HomePage },
@@ -26,5 +27,9 @@ export const routes = [
     {
         path: '/upcoming',
         component: Upcoming
+    },
+    {
+        path: '/on-tv',
+        component: OnTv
     }
 ];

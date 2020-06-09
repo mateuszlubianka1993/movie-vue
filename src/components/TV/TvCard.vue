@@ -42,7 +42,7 @@ import {
   mdbRating
 } from "mdbvue";
 export default {
-  name: "MovieCard",
+  name: "TvCard",
   props: ["item"],
   data() {
     return {
