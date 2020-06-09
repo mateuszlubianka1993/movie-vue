@@ -63,7 +63,6 @@ export default {
         .then((response) => {
           const result = response.data;
           this.details = result;
-          console.log(this.details);
         })
         .catch((error) => {
           console.log(error);
