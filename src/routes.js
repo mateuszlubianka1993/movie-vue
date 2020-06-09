@@ -6,6 +6,7 @@ import NowPlaying from './components/Movie/NowPlaying.vue';
 import Upcoming from './components/Movie/Upcoming.vue';
 import OnTv from './components/TV/OnTv.vue';
 import AiringToday from './components/TV/AiringToday.vue';
+import MovieDetails from './components/Movie/MovieDetails';
 
 export const routes = [
     { path: '', component: HomePage },
@@ -36,5 +37,11 @@ export const routes = [
     {
         path: '/tv-today',
         component: AiringToday
+    },
+    {
+        path: '/movie/:id',
+        component: MovieDetails,
+        name: 'movie-details',
+        params: true
     }
 ];
