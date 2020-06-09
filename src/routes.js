@@ -5,6 +5,7 @@ import Search from './components/Search/Search.vue';
 import NowPlaying from './components/Movie/NowPlaying.vue';
 import Upcoming from './components/Movie/Upcoming.vue';
 import OnTv from './components/TV/OnTv.vue';
+import AiringToday from './components/TV/AiringToday.vue';
 
 export const routes = [
     { path: '', component: HomePage },
@@ -31,5 +32,9 @@ export const routes = [
     {
         path: '/on-tv',
         component: OnTv
+    },
+    {
+        path: '/tv-today',
+        component: AiringToday
     }
 ];
