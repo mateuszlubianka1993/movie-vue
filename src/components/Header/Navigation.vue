@@ -1,7 +1,7 @@
 <template>
   <mdb-navbar expand="large" dark color="indigo" class="fixed-top">
     <mdb-navbar-brand href="#">
-      Movie Vue
+      <img src="@/assets/blue_short_api.svg" alt="api-logo" height="20">
     </mdb-navbar-brand>
     <mdb-navbar-toggler>
       <mdb-navbar-nav right>
