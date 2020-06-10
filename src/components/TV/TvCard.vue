@@ -2,13 +2,13 @@
   <div class="tv-card">
     <mdb-card class="tv-card-body">
       <mdb-view hover>
-        <a href="#!">
+        <router-link :to="{ name: 'tv-details', params: { id: item.id } }" >
           <mdb-card-image
             :src="'https://image.tmdb.org/t/p/w200/' + item.poster_path"
             alt="Card image cap"
           />
           <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-        </a>
+        </router-link>
       </mdb-view>
       <mdb-card-body>
         <mdb-card-title>{{item.name}}</mdb-card-title>
