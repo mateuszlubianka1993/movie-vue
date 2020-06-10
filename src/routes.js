@@ -8,6 +8,7 @@ import OnTv from './components/TV/OnTv.vue';
 import AiringToday from './components/TV/AiringToday.vue';
 import MovieDetails from './components/Movie/MovieDetails';
 import TvDetails from './components/TV/TvDetails.vue';
+import PersonDetails from './components/Person/PersonDetails.vue';
 
 export const routes = [
     { path: '', component: HomePage },
@@ -49,6 +50,12 @@ export const routes = [
         path: '/tv/:id',
         component: TvDetails,
         name: 'tv-details',
+        params: true
+    },
+    {
+        path: '/person/:id',
+        component: PersonDetails,
+        name: 'person-details',
         params: true
     }
 ];

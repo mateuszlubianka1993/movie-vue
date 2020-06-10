@@ -2,13 +2,13 @@
   <div class="person-card">
     <mdb-card class="person-card-body">
       <mdb-view hover>
-        <a href="#!">
+        <router-link :to="{ name: 'person-details', params: { id: item.id } }" >
           <mdb-card-image
             :src="'https://image.tmdb.org/t/p/w200/' + item.profile_path"
             alt="Card image cap"
           />
           <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
-        </a>
+        </router-link>
       </mdb-view>
       <mdb-card-body>
         <mdb-card-title>{{item.name}}</mdb-card-title>
