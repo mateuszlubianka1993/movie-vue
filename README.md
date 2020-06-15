@@ -56,7 +56,7 @@ You can also search for movies/people/tv shows by title/name.
 
 ## Screens
 ![Desktop](img/desktop.jpg)
-![Mobile1](img/mobile.jpg)
+![Mobile1](img/mobile1.jpg)
 ![Mobile2](img/mobile2.jpg)
 ![Mobile3](img/mobile3.jpg)
 
