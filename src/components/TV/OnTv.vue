@@ -1,8 +1,8 @@
 <template>
-  <div class="">
-    <section style="background: #ededed; padding-bottom: 100px">
-      <mdb-edge-header color="indigo" />
-      <mdb-container free-bird>
+  <div class="on-tv">
+    <section style=" padding-bottom: 100px" class="grey lighten-2">
+      <mdb-edge-header color="indigo" class="ontv-header" />
+      <mdb-container free-bird class="animated slideInUp">
         <mdb-row>
           <mdb-col
             md="8"
@@ -19,10 +19,10 @@
         </mdb-row>
       </mdb-container>
     </section>
-    <div class="list-container container-fluid">
+    <div class="list-container container-fluid pt-5">
         <div class="row" v-if="shows && shows.length > 1">
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 card-col" v-for="(item, index) in shows" :key="index">
-                <TvCard :item="item" />
+                <TvCard :item="item" v-animateOnScroll="{animation: 'fadeInLeft'}" />
             </div>
         </div>
     </div>
@@ -40,7 +40,8 @@ import {
   mdbContainer,
   mdbRow,
   mdbCol,
-  mdbCardBody
+  mdbCardBody,
+  animateOnScroll
 } from "mdbvue";
 export default {
   name: "OnTv",
@@ -51,6 +52,9 @@ export default {
     mdbCol,
     mdbCardBody,
     TvCard
+  },
+  directives: {
+    animateOnScroll
   },
   data() {
     return {
@@ -81,7 +85,16 @@ export default {
 </script>
 
 <style lang="scss">
-.card-col{
+.on-tv {
+  .ontv-header {
+    // Zdjęcie autorstwa rovenimages.com z Pexels
+    background-image: url('../../assets/top-bg-2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .card-col{
     margin-bottom: 15px;
+}
 }
 </style>

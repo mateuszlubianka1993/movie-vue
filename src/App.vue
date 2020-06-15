@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="rgba-grey-strong">
     <Navigation/>
     <router-view></router-view>
     <Footer />

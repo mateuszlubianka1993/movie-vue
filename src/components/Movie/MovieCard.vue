@@ -1,11 +1,12 @@
 <template>
   <div class="movie-card">
-    <mdb-card class="movie-card-body">
+    <mdb-card class="movie-card-body z-depth-4 rounded-sm">
       <mdb-view hover>
         <router-link :to="{ name: 'movie-details', params: { id: item.id } }" >
           <mdb-card-image
             :src="'https://image.tmdb.org/t/p/w200/' + item.poster_path"
             alt="Card image cap"
+            class="rounded-lg"
           />
           <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
         </router-link>

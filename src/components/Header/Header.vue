@@ -1,7 +1,7 @@
 <template>
   <div class="main-header">
-    <div class="header-content">
-      <h1>Movie App Vue</h1>
+    <div class="header-content animated slideInUp">
+      <h1 class="bold-text">Movie App Vue</h1>
       <p>{{ msg }}</p>
     </div>
   </div>
@@ -18,7 +18,9 @@ export default {
 
 <style scoped lang="scss">
 .main-header {
-  background-color: aqua;
+  background-image: url('../../assets/header-bg3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 80vh;
   display: flex;
   justify-content: center;

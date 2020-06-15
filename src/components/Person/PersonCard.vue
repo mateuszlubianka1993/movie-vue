@@ -1,11 +1,12 @@
 <template>
   <div class="person-card">
-    <mdb-card class="person-card-body">
+    <mdb-card class="person-card-body z-depth-4 rounded-sm">
       <mdb-view hover>
         <router-link :to="{ name: 'person-details', params: { id: item.id } }" >
           <mdb-card-image
             :src="'https://image.tmdb.org/t/p/w200/' + item.profile_path"
             alt="Card image cap"
+            class="rounded-lg"
           />
           <mdb-mask flex-center waves overlay="white-slight"></mdb-mask>
         </router-link>

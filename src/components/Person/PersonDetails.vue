@@ -1,7 +1,7 @@
 <template>
   <div class="detail-container">
-    <div class="movie-bg-img" :style="`background-image: url('https://image.tmdb.org/t/p/h632/${details.profile_path}');`">
-        <div class="content container-fluid pb-2 pt-2">
+    <div class="movie-bg-img animated fadeIn" :style="`background-image: url('https://image.tmdb.org/t/p/h632/${details.profile_path}');`">
+        <div class="content container-fluid pb-2 pt-2 animated slideInUp">
             <div class="row">
                 <div class="col-12 title-box">
                     <mdb-badge color="warning">Person</mdb-badge>
@@ -18,10 +18,10 @@
     </div>
     <div class="content container-fluid">
         <div class="row mt-3 border-bottom border-dark pb-3">
-            <div class="col-5">
+            <div class="col-5 animated slideInLeft">
                 <img :src="'https://image.tmdb.org/t/p/w200/' + details.profile_path" class="img-fluid z-depth-3" alt="1" />
             </div>
-            <div class="col-7">
+            <div class="col-7 animated slideInRight">
                 <p class="small text-left">{{details.biography}}</p>
             </div>
         </div>

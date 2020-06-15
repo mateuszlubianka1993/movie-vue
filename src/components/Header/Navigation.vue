@@ -1,5 +1,5 @@
 <template>
-  <mdb-navbar expand="large" dark color="indigo" class="fixed-top">
+  <mdb-navbar expand="large" dark color="elegant-color" class="fixed-top z-depth-5">
     <mdb-navbar-brand href="#">
       <img src="@/assets/blue_short_api.svg" alt="api-logo" height="20">
     </mdb-navbar-brand>
@@ -7,21 +7,21 @@
       <mdb-navbar-nav right>
         <router-link to="/" ><mdb-nav-item active>Home</mdb-nav-item></router-link>
          <mdb-dropdown tag="li" class="nav-item">
-          <mdb-dropdown-toggle tag="a" navLink color="indigo" slot="toggle" waves-fixed>Rankings</mdb-dropdown-toggle>
+          <mdb-dropdown-toggle tag="a" navLink color="elegant-color" slot="toggle" waves-fixed>Rankings</mdb-dropdown-toggle>
           <mdb-dropdown-menu>
             <mdb-dropdown-item><router-link to="/top-movies" >Top Movies</router-link></mdb-dropdown-item>
             <mdb-dropdown-item><router-link to="/top-tvshows" >Top Tv Shows</router-link></mdb-dropdown-item>
           </mdb-dropdown-menu>
         </mdb-dropdown>
         <mdb-dropdown tag="li" class="nav-item">
-          <mdb-dropdown-toggle tag="a" navLink color="indigo" slot="toggle" waves-fixed>Movies</mdb-dropdown-toggle>
+          <mdb-dropdown-toggle tag="a" navLink color="elegant-color" slot="toggle" waves-fixed>Movies</mdb-dropdown-toggle>
           <mdb-dropdown-menu>
             <mdb-dropdown-item><router-link to="/now-playing" >Now Playing</router-link></mdb-dropdown-item>
             <mdb-dropdown-item><router-link to="/upcoming" >Upcoming</router-link></mdb-dropdown-item>
           </mdb-dropdown-menu>
         </mdb-dropdown>
         <mdb-dropdown tag="li" class="nav-item">
-          <mdb-dropdown-toggle tag="a" navLink color="indigo" slot="toggle" waves-fixed>Tv Shows</mdb-dropdown-toggle>
+          <mdb-dropdown-toggle tag="a" navLink color="elegant-color" slot="toggle" waves-fixed>Tv Shows</mdb-dropdown-toggle>
           <mdb-dropdown-menu>
             <mdb-dropdown-item><router-link to="/on-tv" >On Tv</router-link></mdb-dropdown-item>
             <mdb-dropdown-item><router-link to="/tv-today" >Airing Today</router-link></mdb-dropdown-item>

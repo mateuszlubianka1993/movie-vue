@@ -1,25 +1,46 @@
 <template>
   <div class="home-page">
     <Header msg="Welcome to Vue.js Movie App" />
-    <section class="popular-movies mt-3">
+    <section class="popular-movies mt-3" v-animateOnScroll="{animation: 'fadeInLeft'}">
       <h3 class="h3-responsive">Popular Movies</h3>
-      <hr>
-      <VueSlickCarousel v-bind="settings" v-if="popularMovies && popularMovies.length > 1">
-        <MovieCard v-for="(item, index) in popularMovies" :key="index" :item="item" />
+      <hr />
+      <VueSlickCarousel
+        v-bind="settings"
+        v-if="popularMovies && popularMovies.length > 1"
+      >
+        <MovieCard
+          v-for="(item, index) in popularMovies"
+          :key="index"
+          :item="item"
+        />
       </VueSlickCarousel>
     </section>
-    <section class="popular-people mt-5">
+    <section class="popular-people mt-5" v-animateOnScroll="{animation: 'fadeInLeft'}">
       <h3 class="h3-responsive">Popular People</h3>
-      <hr>
-      <VueSlickCarousel v-bind="settings" v-if="popularPeople && popularPeople.length > 1">
-        <PersonCard v-for="(item, index) in popularPeople" :key="index" :item="item" />
+      <hr />
+      <VueSlickCarousel
+        v-bind="settings"
+        v-if="popularPeople && popularPeople.length > 1"
+      >
+        <PersonCard
+          v-for="(item, index) in popularPeople"
+          :key="index"
+          :item="item"
+        />
       </VueSlickCarousel>
     </section>
-    <section class="popular-tv mt-5">
+    <section class="popular-tv mt-5" v-animateOnScroll="{animation: 'fadeInLeft'}">
       <h3 class="h3-responsive">Popular TV Shows</h3>
-      <hr>
-      <VueSlickCarousel v-bind="settings" v-if="popularTvShows && popularTvShows.length > 1">
-        <TvCard v-for="(item, index) in popularTvShows" :key="index" :item="item" />
+      <hr />
+      <VueSlickCarousel
+        v-bind="settings"
+        v-if="popularTvShows && popularTvShows.length > 1"
+      >
+        <TvCard
+          v-for="(item, index) in popularTvShows"
+          :key="index"
+          :item="item"
+        />
       </VueSlickCarousel>
     </section>
   </div>
@@ -30,6 +51,7 @@ import Header from '../Header/Header';
 import MovieCard from '../Movie/MovieCard';
 import PersonCard from '../Person/PersonCard';
 import TvCard from '../TV/TvCard';
+import { animateOnScroll } from 'mdbvue';
 import VueSlickCarousel from 'vue-slick-carousel';
 import 'vue-slick-carousel/dist/vue-slick-carousel.css';
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
@@ -94,6 +116,9 @@ export default {
     PersonCard,
     TvCard
   },
+  directives: {
+    animateOnScroll
+  },
   methods: {
     getPopularMovies() {
       tmdb.get('/movie/popular', {
@@ -152,5 +177,4 @@ export default {
   overflow: hidden;
   padding-bottom: 50px;
 }
-
 </style>
